@@ -1,0 +1,84 @@
+<%- include('../layouts/header'); %>
+
+<section class="ftco-section" id="list">
+  <div class="container">
+    <div class="row justify-content-center pt-3 pb-1 mb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h2>Adobters</h2>
+      </div>
+    </div>
+    <div class="row">
+      <% adobts.forEach(adobt => { %>
+      <div class="card mr-4" style="width: 18rem">
+        <img
+          src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><%= adobt.name %></h5>
+          <p class="card-text"><%= adobt.address %></p>
+          <a
+            href="/adobts/delete/<%= adobt.id %>"
+            class="btn btn-sm btn-danger"
+          >
+            <i class="fa fa-trash"></i>
+          </a>
+          <a
+            href="/adobts/update/<%= adobt.id %>"
+            class="btn btn-sm btn-warning"
+          >
+            <i class="fa fa-edit"></i>
+          </a>
+        </div>
+      </div>
+      <% }) %>
+      <!-- <table
+        id="tableM"
+        class="table table-bordered table-striped"
+        data-toggle="table"
+        data-sticky-header="true"
+        data-click-to-select="true"
+        data-filter-control="true"
+        data-toolbar="#toolbar"
+        data-buttons="buttons"
+        data-search="true"
+      >
+        <thead class="bg-success">
+          <tr class="table-success">
+            <th>No</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Adobt Date</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% adobts.forEach(adobt => { %>
+          <tr>
+            <td><%= adobt.id %></td>
+            <td><%= adobt.name %></td>
+            <td><%= adobt.address %></td>
+            <td><%= adobt.adobt_date %></td>
+            <td><%= adobt.total_price %></td>
+            <td>
+              <a href="" class="btn btn-sm btn-info">
+                <i class="fa fa-eye"></i>
+              </a>
+              <a href="" class="btn btn-sm btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+              <a href="" class="btn btn-sm btn-danger">
+                <i class="fa fa-trash"></i>
+              </a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table> -->
+    </div>
+  </div>
+</section>
+
+<%- include('../layouts/footer'); %>
