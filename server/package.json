@@ -25,6 +25,7 @@
     "swagger-ui-express": "^4.6.3"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.2.11",
     "nodemon": "^2.0.22",
     "sequelize-cli": "^6.6.0"
   },
